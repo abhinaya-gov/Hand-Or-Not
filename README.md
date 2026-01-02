@@ -1,5 +1,14 @@
-# Hand-Or-Not
-A convolutional neural network trained to distinguish between hand and non-hand images, enabling reliable hand presence detection in computer vision tasks.
+<p align="center">
+  <a href="#-Model Architecture">
+    <img src="https://img.shields.io/badge/Architecture-View-blue?style=for-the-badge" />
+  </a>
+  <a href="#-how-it-works">
+    <img src="https://img.shields.io/badge/How%20It%20Works-Explore-green?style=for-the-badge" />
+  </a>
+  <a href="#-future-enhancements">
+    <img src="https://img.shields.io/badge/Future%20Plans-Roadmap-orange?style=for-the-badge" />
+  </a>
+</p>
 
 # Hand Detection CNN
 
@@ -67,6 +76,33 @@ Negatives/
 
 - `hands/`: Contains datasets with hand images
 - `Negatives/`: Contains datasets without hand images
+
+## 📦 Datasets
+
+This project uses a combination of real and synthetic hand image datasets to train and evaluate a **binary hand detection model (hand vs no-hand)**.
+
+### Hand-Bo3ot (Roboflow Universe)
+A general-purpose hand detection dataset with bounding box annotations across different poses, lighting conditions, and backgrounds. Used as the primary dataset for training the detector.  
+https://universe.roboflow.com/yolov4tiny-wzb2k/hand-bo3ot
+
+### Bharatanatyam Mudras (Roboflow Universe)
+Contains annotated images of classical Indian hand gestures (mudras). Used to add diversity in hand shapes, orientations, and fine-grained poses.  
+https://universe.roboflow.com/mudras-avdrb/bharatanatyam-mudras-fg9qo-gcruc
+
+### Hand Gesture Dataset (Roboflow Universe)
+A collection of hand gesture images used for additional data exploration and optional augmentation.  
+https://universe.roboflow.com/horyzn-qhfq4/hand-gesture-gizg2
+
+### Hand Detection Dataset — VOC/YOLO Format (Kaggle)
+A ready-to-use dataset in VOC/YOLO format for standard object detection training and benchmarking.  
+https://www.kaggle.com/datasets/nomihsa965/hand-detection-dataset-vocyolo-format/data
+
+### Synthetic Hand Detection Dataset (Kaggle)
+A synthetic dataset used to improve generalization and robustness, especially for rare poses and edge cases.  
+https://www.kaggle.com/datasets/zeyadkhalid/hand-detection
+
+These datasets together provide a mix of real-world variability and synthetic augmentation, helping the model generalize better across different environments, poses, and lighting conditions.
+
 
 ## Model Architecture
 
