@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="#-model-architecture">
+  <a href="#model-architecture">
     <img src="https://img.shields.io/badge/Architecture-View-blue?style=for-the-badge" />
   </a>
-  <a href="#-how-it-works">
-    <img src="https://img.shields.io/badge/How%20It%20Works-Explore-green?style=for-the-badge" />
+  <a href="#datasets">
+    <img src="https://img.shields.io/badge/Datasets-Explore-green?style=for-the-badge" />
   </a>
-  <a href="#-future-enhancements">
+  <a href="#future-enhancements">
     <img src="https://img.shields.io/badge/Future%20Plans-Roadmap-orange?style=for-the-badge" />
   </a>
 </p>
@@ -77,7 +77,7 @@ Negatives/
 - `hands/`: Contains datasets with hand images
 - `Negatives/`: Contains datasets without hand images
 
-## 📦 Datasets
+## Datasets
 
 This project uses a combination of real and synthetic hand image datasets to train and evaluate a **binary hand detection model (hand vs no-hand)**.
 
@@ -111,6 +111,9 @@ These datasets together provide a mix of real-world variability and synthetic au
 - Each block: Conv2d → BatchNorm → ReLU → MaxPool
 - Fully connected layers: 128×7×7 → 64 → 32 → 2
 - Dropout (0.5) for regularization
+
+<img width="1978" height="854" alt="image" src="https://github.com/user-attachments/assets/c1f403b6-2f3a-445a-bbf6-a2208a12d602" />
+
 
 **Input**: 224×224 RGB images  
 **Output**: Binary classification (hand/no_hand)
@@ -173,10 +176,35 @@ USE_GPU = torch.mps.is_available()    # Enable GPU (MPS for Mac, CUDA for others
 ## Performance
 
 Metrics:
-- **Training Accuracy**: ~95%
-- **Dev Accuracy**: ~92%
-- **Precision**: ~93%
-- **Recall**: ~91%
+- **Training Accuracy**: ~96%
+- **Dev Accuracy**: ~98%
+- **Precision**: ~97%
+- **Recall**: ~99%
+
+## Future Enhancements
+
+Possible improvements and extensions for this project include:
+
+- **Temporal modeling for video streams**  
+  Add temporal smoothing or sequence models (e.g., moving average, LSTM, or 3D CNN) to improve stability in video inference.
+
+- **Domain adaptation and robustness**  
+  Improve generalization to:
+  - Different skin tones
+  - Gloves, accessories, and occlusions
+  - Extreme lighting or low-quality cameras
+
+- **Active learning loop**  
+  Allow users to correct predictions and continuously improve the model with new labeled data.
+
+- **Explainability and debugging tools**  
+  Add Grad-CAM or feature visualization to better understand what the model focuses on during prediction.
+
+- **Benchmark against pretrained models**  
+  Compare performance with pretrained backbones like MobileNet, ResNet, or EfficientNet.
+
+These enhancements would evolve the project from a learning-focused prototype into a more robust, scalable, and production-ready vision system.
+
 
 ## File Outputs
 
