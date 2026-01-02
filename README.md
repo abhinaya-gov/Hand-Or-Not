@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="#-Model Architecture">
+  <a href="#-model-architecture">
     <img src="https://img.shields.io/badge/Architecture-View-blue?style=for-the-badge" />
   </a>
   <a href="#-how-it-works">
